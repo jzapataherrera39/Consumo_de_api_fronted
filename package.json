@@ -1,0 +1,19 @@
+{
+  "name": "consumo_de_api_fronted",
+  "version": "1.0.0",
+  "description": "Crud de usuarios",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongodb": "^3.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
