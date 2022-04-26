@@ -1,8 +1,8 @@
 # VUE.JS CRUD
 
-CRUD de usuários utlizando Vue.js no front-end e Node.js com MongoDB no back-end.
+CRUD de usuario utilizando Vue.js en el front-end y Node.js con MongoDB en el back-end.
 
-*🌎 [English](README.md), [Português brasileiro](README.pt-br.md)*
+*🌎 [inglés](README.md),(README.en-br.md)*
 <hr/>
 <img src="./client/src/assets/homepage.png" />
 <details>
@@ -13,71 +13,75 @@ CRUD de usuários utlizando Vue.js no front-end e Node.js com MongoDB no back-en
 </pre>
 </details>
 
-## Instalação
+## Instalación
 
-Necessário ter instalado o [**MongoDB**](https://www.mongodb.com/try/download/community "**MongoDB**") e [**Node.js**](https://nodejs.org/en/download/ "**Node.js**") na sua máquina.
+Necesitas tener instalado [**MongoDB**](https://www.mongodb.com/try/download/community "**MongoDB**") y [**Node.js**](https://nodejs.org/en/download/ "**Node.js**") en tu máquina.
 
-```bash
-# Clone o repositório
+``bash
+# Clonar el repositorio
 $ git clone https://github.com/leonardogbxv/vuejs-crud.git
-# Entre na pasta do projeto
+# Entra en la carpeta del proyecto
 $ cd vuejs-crud
-# Instale as dependências do projeto
+# Instalar las dependencias del proyecto
 $ npm install
-# Entre na pasta do front-end
-$ cd client
-# Instale as dependências do front-end
+# Cambiar a la carpeta de front-end
+$ cd cliente
+# Instalar las dependencias del front-end
 $ npm install
-# Execute o front-end
+# Ejecutar el front-end
 $ npm run serve
-# Volte para a raiz do projeto (vuejs-crud)
-$ cd ..
-# Execute o back-end
+# Vuelve a la raíz del proyecto (vuejs-crud)
+$ cd ...
+# Ejecutar el back-end
 $ npm run dev
 ```
 
-Agora temos o front-end rodando na porta 3000, e a API REST na porta 8080.
+Ahora tenemos el front-end corriendo en el puerto 3000, y la API REST en el puerto 8080.
+
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 
 ## Funcionalidades
 
-- Cadastrar novos usuários com nome, e-mail e senha; **(CREATE)**
-- Listar todos os usuários da aplicação em uma tabela na página inicial, tabela essa com as seguintes informações: **(READ)**
-  - Usuario ID (ObjectId único do usuário no MongoDB);
-  - Nome;
-  - E-mail;
-  - Senha;
-- Editar informações de um usuário já cadastrado; **(UPDATE)**
-- Remover um usuário da aplicação; **(DELETE)**
+- Registrar nuevos usuarios con nombre, correo electrónico y contraseña; **(CREAR)**
+- Enumerar todos los usuarios de la aplicación en una tabla en la página de inicio, una tabla con la siguiente información: **(LEER)
+  - ID de usuario (ObjectId único del usuario en MongoDB)
+  - Nombre;
+  - Correo electrónico;
+  - Contraseña;
+- Editar la información de un usuario ya registrado; **(UPDATE)**
+- Eliminar un usuario de la aplicación; **(DELETE)**
 
-## Como funciona
+## Cómo funciona
 
-Nesse projeto, é realiza a divisão entre o front-end e back-end, de modo que ambos iniciem em endereços/portas diferentes.
+En este proyecto, la división entre el front-end y el back-end está hecha, de manera que ambos comienzan en diferentes direcciones/puertos.
 
-### API REST
+### REST API
 
-No back-end, é onde temos a nossa API e banco de dados, desenvolvidos em Node.js e MongoDB, rodando na porta 3000. Todas as rotas de *GET*, *POST*, *PUT* e *DELETE* podem ser localizadas no diretório `server>routes>api>users.js`, elas correspondem à rota http `/api/users` da aplicação (http://localhost:3000/api/users). A conexão com o banco de dados é feita no diretório `server>database>db.js`, nesse arquivo também temos as funções do CRUD sendo exportadas para serem usadas nas rotas da API.
+En el back-end, es donde tenemos nuestra API y base de datos, desarrollada en Node.js y MongoDB, corriendo en el puerto 3000. Todas las rutas *GET*, *POST*, *PUT* y *DELETE* se encuentran en el directorio `server>routes>api>users.js`, corresponden a la ruta http `/api/users` de la aplicación (http://localhost:3000/api/users). La conexión a la base de datos se realiza en el directorio `servidor>base de datos>db.js`, en este archivo también tenemos las funciones CRUD que se exportan para ser utilizadas en las rutas de la API.
 
-> Foi usado a aplicação Postman para testar envios e recebimento de dados, via requisições HTTP, para a API. A collection com todas as requisições está no diretório `>server>postman>vuejs-crud.postman_collection.json`, caso queria testar no seu Postman.
+> La aplicación Postman se utilizó para probar el envío y la recepción de datos, mediante peticiones HTTP, a la API. La colección con todas las peticiones está en el directorio `>servidor>postman>vuejs-crud.postman_collection.json`, por si quieres probarlo en tu Postman.
+
 
 ### Front-end
 
-O front-end, nosso "client", foi desenvolvido totalmente com Vue.js - framework JavaScript -, este rodando na porta 8080 (http://localhost:8080). O projeto foi construído com o cliente oficial do Vue.js, o Vue CLI, facilitando a configuração e geração da aplicação Vue.js; Opção escolhida por se tratar de um ambiente mais profissional, de acordo com pesquisas, porém a utilização do Vue.js com a inclusão direta da tag `<script>` também foi estudada. 
+El front-end, nuestro "cliente", fue desarrollado íntegramente con Vue.js - framework de JavaScript - que se ejecuta en el puerto 8080 (http://localhost:8080). El proyecto se construyó con el cliente oficial de Vue.js, el Vue CLI, facilitando la configuración y generación de la aplicación Vue.js; opción elegida por ser un entorno más profesional, según la investigación, pero también se estudió el uso de Vue.js con la inclusión directa de la etiqueta `<script>`. 
 
-Essa aplicação Vue, é composta por 4 componentes:
+Esta aplicación Vue, está compuesta por 4 componentes:
 
-- `<Header />`: Cabeçalho com título e "painel de navegação" da aplicação;
-- `<UserRegisterForm />`: Modal com o formulário para cadastro de um novo usuário;
-- `<UserEditForm />`: Modal com o formulário para editar e enviar as alterações do usuário;
-- `<UsersTable />`: Tabela com toda a listagem dos usuários cadastrados no sistema.
+- `<Header />`: Cabecera con título y "panel de navegación" de la aplicación;
+- `<UserRegisterForm />`: Modal con el formulario para registrar un nuevo usuario;
+- `<UserEditForm />`: Modal con el formulario para editar y enviar los cambios del usuario;
+- `<UsersTable />`: Tabla con toda la lista de usuarios registrados en el sistema.
 
-Esses componentes são todos renderizados no `App.vue`, a raiz da aplicação. Ele define o template da nossa página, adicionando os componentes na tag `<template>`.
-As requisições, para a API do back-end, são todas feitas usando a própria Fetch API do JavaScript, o CRUD é posto em funcionamento com ela. O *GET* e *DELETE* são realizados no componente `<UsersTable />`, *POST* no modal de cadastro `<UserRegisterForm />`, e a requisição *PUT* é feita no modal de edição `<UserEditForm />`.
+Todos estos componentes se renderizan en `App.vue`, la raíz de la aplicación. Define la plantilla de nuestra página, añadiendo los componentes en la etiqueta `<template>`.
+Las peticiones, a la API del back-end, se hacen todas usando la propia API Fetch de JavaScript, el CRUD se pone en marcha con ella. Las peticiones *GET* y *DELETE* se realizan en el componente `<UsersTable />`, *POST* en el modal `<UserRegisterForm />`, y la petición *PUT* se realiza en el modal `<UserEditForm />`.
 
-O framework Bootstrap, foi usado para fazer a resposividade e estilização de alguns elementos da aplicação. Os modais, de cadastro e edição, foram estilizados com CSS puro.
+El framework Bootstrap, se utilizó para hacer la capacidad de respuesta y el estilo de algunos elementos de la aplicación. Los modales de registro y edición, fueron estilizados con CSS puro.
 
-## Tecnologias
 
-Abaixo estão as tecnologias e depêndencias utilizadas no desenvolvimento do projeto.
+## Tecnologías
+
+A continuación se detallan las tecnologías y dependencias utilizadas en el desarrollo del proyecto.
 
 - [**Vue.js:**](https://vuejs.org/ "**Vue.js:**") Framework JavaScript Progressivo, usado para desenvolver interfaces de usuário dinâmicas com HMTL, CSS e JS.
 - [**Bootstrap:**](https://getbootstrap.com/docs/4.5/getting-started/introduction/ "**Bootstrap:**") Framework front-end com uma grande coleção de códigos CSS, foi usado no projeto para fazer a estilização e responsividade.
