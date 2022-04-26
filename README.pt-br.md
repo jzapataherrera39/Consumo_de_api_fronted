@@ -19,7 +19,7 @@ Necesitas tener instalado [**MongoDB**](https://www.mongodb.com/try/download/com
 
 ``bash
 # Clonar el repositorio
-$ git clone https://github.com/leonardogbxv/vuejs-crud.git
+$ git clone https://github.com/jzapataherrera39/Consumo_de_api_fronted
 # Entra en la carpeta del proyecto
 $ cd vuejs-crud
 # Instalar las dependencias del proyecto
