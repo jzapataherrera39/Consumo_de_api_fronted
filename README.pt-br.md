@@ -38,7 +38,6 @@ $ npm run dev
 
 Ahora tenemos el front-end corriendo en el puerto 3000, y la API REST en el puerto 8080.
 
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 
 ## Funcionalidades
 
