@@ -1,4 +1,4 @@
-// Conexão com o banco de dados
+// Conexión a la base de datos
 const mongodb = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
 
@@ -7,9 +7,9 @@ mongodb.connect('mongodb://localhost/vuejs-crud', {
   useUnifiedTopology: true
 }).then(conn => {
   global.conn = conn.db('vuejs-crud');
-  console.log("Conectado no MongoDB!");
+  console.log("Conectado a MongoDB!");
 }).catch((err) => {
-  console.error('Error: Falha na conexão... ' + err);
+  console.error('Error: La conexión ha fallado... ' + err);
 });
 
 /**
@@ -25,12 +25,12 @@ async function insertUser(user, callback) {
   return await global.conn.collection('users').insertOne(user, callback);
 }
 
-// Atualiza/edita dados do usuario na collection 'users'
+// Actualizar/editar los datos del usuario en la colección 'users'
 async function updateUser(id, user) {
   return await global.conn.collection('users').updateOne({_id: new ObjectId(id)}, {$set: user});
 }
 
-// Deleta um usuario da collection 'users'
+// Elimina un usuario de la colección 'users'.
 async function deleteUser(id) {
   return await global.conn.collection('users').deleteOne({_id: new ObjectId(id)});
 }
