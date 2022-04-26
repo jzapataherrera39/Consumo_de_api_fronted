@@ -24,10 +24,10 @@ router.post('/', async (req, res) => {
       createdAt: new Date()
     });
   
-    return res.status(200).send({ success: 'Usuario criado com sucesso!'});
+    return res.status(200).send({ success: 'Usuario creado'});
   } catch (error) {
     console.log(error);
-    return res.status(400).send({ error: 'Ocorreu um erro na criação de usuário...' });
+    return res.status(400).send({ error: 'Error 404' });
   }
 });
 
