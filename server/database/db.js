@@ -15,6 +15,7 @@ mongodb.connect('mongodb://localhost/vuejs-crud', {
 /**
  * CRUD de usuarios
  */
+
 // Retorna os documentos da collection 'users'
 async function findUsers(callback) {
   return await global.conn.collection('users').find({}).toArray(callback);

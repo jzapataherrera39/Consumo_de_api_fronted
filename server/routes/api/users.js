@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
       createdAt: new Date()
     });
   
+  
     return res.status(200).send({ success: 'Usuario creado'});
   } catch (error) {
     console.log(error);
