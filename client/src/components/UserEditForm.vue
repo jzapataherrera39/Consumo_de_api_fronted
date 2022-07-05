@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <!-- Adiciona/remove a classe "show" -->
+    <!-- Añadir/quitar la clase "show" -->
     <div v-bind:class="modalClass" class="modal-container">
       <div class="user-modal">
         <h3 class="text-info">Editar Usuário</h3>
@@ -20,7 +20,7 @@
             <input v-bind:value="user.password" required type="password" id="passwordEdit" class="form-control"/>
           </div>
 
-          <!-- ao clicar, "showModal" passa a ser false -->
+          <!-- al hacer clic, "showModal" se convierte en falso -->
           <button v-on:click.prevent="showModal = !showModal" class="btn btn-secondary mr-1">Fechar</button>
           <button v-on:click="updateUser(user._id)" type="submit" class="btn btn-primary">Salvar</button> 
         </form>
@@ -43,7 +43,7 @@ export default {
     }
   },
   methods: {
-    // Requisição PUT para atualizar informações do usuário
+    // Solicitud PUT para actualizar la información del usuario
     async updateUser(id) {
       await fetch(`http://localhost:3000/api/users/edit/${id}`, {
         method: 'PUT',
@@ -64,7 +64,7 @@ export default {
       });
     }
   },
-  // Ao criar o componente, recebemos os dados emitidos do 'EventBus' aqui nesse componente
+  // Al crear el componente, recibimos los datos emitidos por el 'EventBus' aquí en este componente
   created() {
     // evento de click
     EventBus.$on('click', (modal, user) => {
@@ -74,7 +74,7 @@ export default {
       console.log('modal', modal)
     })
   },
-  // Função para colocar ou tirar a classe "show" no Modal
+  // Función para poner o quitar la clase "show" en Modal
   computed: {
     modalClass() {
       return this.showModal ? 'show' : '';
@@ -85,5 +85,5 @@ export default {
 </script>
 
 <style>
-/* Esta usando a mesma estilização do modal de cadastro */
+/* Esto utiliza el mismo estilo que el modal de registro */
 </style>

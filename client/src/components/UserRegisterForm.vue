@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <!-- "showModal" passa a ser true -->
+    <!-- "showModal" se convierte en verdadero -->
     <button v-on:click="showModal = !showModal" class="btn btn-lg btn-outline-primary float-right">Cadastrar Usuário</button>
     
-    <!-- Adiciona/remove a classe "show" -->
+   <!-- Añadir/quitar la clase "show" -->
     <div v-bind:class="modalClass" class="modal-container">
       <div class="user-modal">
-        <h3 class="text-primary">Cadastro de Usuário</h3>
+        <h3 class="text-primary">Registro de usuario</h3>
         <form>
           <div class="form-group">
             <label for="name">Nome</label>
@@ -23,7 +23,7 @@
             <input required value="" type="password" id="passwordRegister" class="form-control"/>
           </div>
           
-          <!-- ao clicar, "showModal" passa a ser false -->
+          <!-- al hacer clic, "showModal" se convierte en falso -->
           <button v-on:click.prevent="showModal = !showModal" class="btn btn-secondary mr-1">Fechar</button>
           <button v-on:click="createUser()" type="submit" class="btn btn-primary">Salvar</button> 
         </form>
@@ -43,7 +43,7 @@ export default {
     };
   },
   methods: {
-    // Requisição POST para criar um novo usuário
+    // Solicitud POST para crear un nuevo usuario
     async createUser() {
       await fetch('http://localhost:3000/api/users/', {
         method: 'POST',
@@ -64,7 +64,7 @@ export default {
       });
     }
   },
-  // Função para colocar ou tirar a classe "show" no Modal
+  // Función para poner o quitar la clase "show" en Modal
   computed: {
     modalClass() {
       return this.showModal ? 'show' : '';

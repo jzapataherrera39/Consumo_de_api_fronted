@@ -21,7 +21,7 @@ async function findUsers(callback) {
   return await global.conn.collection('users').find({}).toArray(callback);
 }
 
-// Insere um novo usuario na collection 'users'
+// Insertar un nuevo usuario en la colección 'users'
 async function insertUser(user, callback) {
   return await global.conn.collection('users').insertOne(user, callback);
 }

@@ -1,20 +1,20 @@
 <template>
   <div class="container">
     <h3 class="mt-2 mb-3 float-left text-primary">Usuários</h3>
-    <!-- Tabela de Usuários -->
+    <!-- Tabla de usuario -->
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Usuario ID</th>
-          <th scope="col">Nome</th>
+          <th scope="col">Nombre</th>
           <th scope="col">E-mail</th>
-          <th scope="col">Senha</th>
+          <th scope="col">Contraseña</th>
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
-        <!-- Diretiva "v-for" para pegar os usuários da API -->
+        <!-- Directiva "v-for" para obtener los usuarios de la API -->
         <tr v-for="(user, index) in users.users" :key="user._id" class="m-5">
           <th scope="row">{{ index + 1 }}</th>
           <td>{{ user._id }}</td>
@@ -32,7 +32,7 @@
         <!-- Fim "v-for" -->
       </tbody>
     </table>
-    <!-- Fim tabela -->
+    <!-- Tabla final -->
   </div>
 </template>
 
@@ -46,8 +46,9 @@ export default {
       users: [],
       showModal: false
     }
-  },
-  // Ao criar o componente, é feito uma requisição GET para a API do backend
+  }, 
+  // Al crear el componente, se realiza una petición GET a la API del backend
+
   async created() {
     await fetch('http://localhost:3000/api/users/')
     .then(response => response.json())
@@ -60,7 +61,7 @@ export default {
     });
   },
   methods: {
-    // Requisição DELETE para excluir o usuário
+    // Petición DELETE para eliminar el usuario
     async deleteUser(id) {
       await fetch(`http://localhost:3000/api/users/delete/${id}`, {
         method: 'DELETE'
@@ -70,8 +71,8 @@ export default {
         console.error(err);
       });
     },
-    // Metodo usa o 'EventBus' para poder emitir dados de forma global
-    // --> Emite dados de "user" e "showModal"
+    // El método utiliza el 'EventBus' para poder emitir datos de forma global
+    // --> Salen los datos "user" y "showModal"
     emitShowModal(user) {
       this.user = user;
       EventBus.$emit('click', this.showModal, this.user);
