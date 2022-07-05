@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <!-- "showModal" se convierte en verdadero -->
-    <button v-on:click="showModal = !showModal" class="btn btn-lg btn-outline-primary float-right">Cadastrar Usuário</button>
+    <button v-on:click="showModal = !showModal" class="btn btn-lg btn-outline-primary float-right">Registrar usuario</button>
     
    <!-- Añadir/quitar la clase "show" -->
     <div v-bind:class="modalClass" class="modal-container">
