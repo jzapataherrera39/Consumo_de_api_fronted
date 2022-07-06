@@ -22,7 +22,7 @@ Necesitas tener instalado [**MongoDB**](https://www.mongodb.com/try/download/com
 # Clonar el repositorio
 $ git clone https://github.com/jzapataherrera39/Consumo_de_api_fronted
 # Entra en la carpeta del proyecto
-$ cd vuejs-crud
+$ cd Consumo_de_api_fronted
 # Instalar las dependencias del proyecto
 $ npm install
 # Cambiar a la carpeta de front-end
