@@ -6,7 +6,7 @@
         <h3 class="text-info">Editar Usuário</h3>
         <form>
           <div class="form-group">
-            <label for="">Nome</label>
+            <label for="">Nombre</label>
             <input v-bind:value="user.name" required type="text" id="nameEdit" class="form-control"/>
           </div>
   
@@ -16,7 +16,7 @@
           </div>
           
           <div class="form-group">
-            <label for="">Senha</label>
+            <label for="">Contraseña</label>
             <input v-bind:value="user.password" required type="password" id="passwordEdit" class="form-control"/>
           </div>
 

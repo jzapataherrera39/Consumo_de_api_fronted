@@ -10,7 +10,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">E-mail</th>
           <th scope="col">Contraseña</th>
-          <th scope="col"></th>
+          <th scope="col">Opciones</th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +25,7 @@
           <td>
             <form>
               <button v-on:click.prevent="emitShowModal(user)" class="btn btn-sm btn-info mr-1">Editar</button>
-              <button v-on:click="deleteUser(user._id)" type="submit" class="btn btn-sm btn-danger">Deletar</button>
+              <button v-on:click="deleteUser(user._id)" type="submit" class="btn btn-sm btn-danger">Borrar</button>
             </form>
           </td>
         </tr>

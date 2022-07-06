@@ -7,7 +7,7 @@
     <nav class="mt-4 mb-3">
       <a href="/" class="btn btn-outline-primary mr-1">Home</a>
       <a href="http://localhost:3000/api/users" class="btn btn-primary mr-1">Server API</a>
-      <a href="https://github.com/leonardogbxv" class="btn btn-secondary mr-1">Github</a>
+      <a href="https://github.com/jzapataherrera39" class="btn btn-secondary mr-1">Github</a>
     </nav>
   </div>
 </template>

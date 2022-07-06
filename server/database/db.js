@@ -2,7 +2,7 @@
 const mongodb = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
 
-mongodb.connect('mongodb://localhost/vuejs-crud', {
+mongodb.connect('mongodb://localhost:27017', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(conn => {

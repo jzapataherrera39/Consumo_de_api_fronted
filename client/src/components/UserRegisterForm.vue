@@ -9,7 +9,7 @@
         <h3 class="text-primary">Registro de usuario</h3>
         <form>
           <div class="form-group">
-            <label for="name">Nome</label>
+            <label for="name">Nombre</label>
             <input required value="" type="text" id="nameRegister" class="form-control"/>
           </div>
     
@@ -19,13 +19,13 @@
           </div>
           
           <div class="form-group">
-            <label for="password">Senha</label>
+            <label for="password">Contraseña</label>
             <input required value="" type="password" id="passwordRegister" class="form-control"/>
           </div>
           
           <!-- al hacer clic, "showModal" se convierte en falso -->
-          <button v-on:click.prevent="showModal = !showModal" class="btn btn-secondary mr-1">Fechar</button>
-          <button v-on:click="createUser()" type="submit" class="btn btn-primary">Salvar</button> 
+          <button v-on:click.prevent="showModal = !showModal" class="btn btn-secondary mr-1">Cerrar</button>
+          <button v-on:click="createUser()" type="submit" class="btn btn-primary">Guardar</button> 
         </form>
       </div>
     </div>
